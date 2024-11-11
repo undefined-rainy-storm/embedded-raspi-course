@@ -2,16 +2,17 @@ import tensorflow as tf
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import config as c
 
-test_data = pd.read_csv(f'assets/df_test.csv')
-answer_data = pd.read_csv(f'assets/df_gt.csv')
+test_data = pd.read_csv(c.PATH_DATAFRAME_TEST_CSV)
+answer_data = pd.read_csv(c.PATH_DATAFRAME_GROUNDTRUTH_CSV)
 test_data = test_data.to_numpy()
 answer_data = answer_data.to_numpy()
 
 test_data = test_data.reshape(100,)
 answer_data = answer_data.reshape(100,)
 
-model = tf.lite.Interpreter('assets/learned_sin_model_quantized.tflite')
+model = tf.lite.Interpreter(PATH_MODEL_BINARY_QUANTIZED)
 model.allocate_tensors()
 
 input_index = model.get_input_details()[0]['index']
