@@ -6,5 +6,10 @@
 
 ```
 conda create -n <env-name> python=3.10
-conda install --file requirements.txt
+conda install --file requirements.dev.txt
+```
+
+```
+python -m venv <env-name>
+pip install -r requirements.prod.txt
 ```
