@@ -5,5 +5,6 @@
 [`conda_env.yml`](./conda_env.yml) 참조
 
 ```
+conda create -n <env-name> python=3.10
 conda install --file requirements.txt
 ```
