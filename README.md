@@ -11,5 +11,6 @@ conda install --file requirements.dev.txt
 
 ```
 python -m venv <env-name>
+source <env-name>/bin/activate
 pip install -r requirements.prod.txt
 ```
