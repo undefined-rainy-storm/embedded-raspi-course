@@ -1,0 +1,11 @@
+name: embedded
+channels:
+  - defaults
+dependencies:
+  - python=3.10.13
+  - jupyter
+  - matplotlib
+  - numpy==1.26.4
+  - pandas==2.2.2
+  - tensorflow==2.10.0
+prefix: /opt/anaconda3/envs/embedded
