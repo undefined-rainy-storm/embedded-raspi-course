@@ -12,7 +12,7 @@ answer_data = answer_data.to_numpy()
 test_data = test_data.reshape(100,)
 answer_data = answer_data.reshape(100,)
 
-model = tf.lite.Interpreter(PATH_MODEL_BINARY_QUANTIZED)
+model = tf.lite.Interpreter(c.PATH_MODEL_BINARY_QUANTIZED)
 model.allocate_tensors()
 
 input_index = model.get_input_details()[0]['index']
