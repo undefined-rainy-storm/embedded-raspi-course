@@ -33,7 +33,7 @@ single_input = tf.expand_dims(x_test[100], axis=0)
 single_answer = tf.expand_dims(y_test[100], axis=0)
 
 # load model
-model = tf.keras.models.load_model('mnist.h5')
+model = tf.keras.models.load_model('mnist_model.h5')
 
 # prediction
 Y_pred = model.predict(single_input)
